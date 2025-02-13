@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Be My Valentine? ❤️</title>
+    <style>
+        body {
+            background-color: #ffe6e6;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            overflow: hidden;
+        }
+        .container, .valentine-page {
+            background: #fff0f5;
+            padding: 20px 30px;
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            text-align: center;
+        }
+        h1 { color: #ff4d6d; }
+        p { font-size: 18px; color: #333; margin: 15px 0; }
+        .gif-container img { width: 300px; border-radius: 10px; } /* Increased size from 200px to 300px */
+        .button-container { margin-top: 20px; }
+        .btn { background-color: #ff4d6d; color: white; padding: 10px 20px; border: none; border-radius: 8px; }
+        .btn:hover { background-color: #e6004c; }
+        .floating-elements { position: fixed; width: 100%; height: 100%; top: 0; left: 0; pointer-events: none; z-index: -1; }
+        .element-float { position: absolute; bottom: -50px; font-size: 24px; animation: float 5s linear infinite; }
+        .element-float-heart { color: red; }
+        .element-float-flower { color: pink; }
+        @keyframes float { 0% { transform: translateY(0); opacity: 1; } 100% { transform: translateY(-100vh); opacity: 0; } }
+    </style>
+</head>
+<body>
+    <div class="floating-elements">
+        <span class="element-float element-float-heart" style="left: 10%; animation-delay: 0s;">❤️</span>
+        <span class="element-float element-float-flower" style="left: 25%; animation-delay: 1s;">🌸</span>
+        <span class="element-float element-float-heart" style="left: 40%; animation-delay: 2s;">❤️</span>
+        <span class="element-float element-float-flower" style="left: 55%; animation-delay: 3s;">🌺</span>
+        <span class="element-float element-float-heart" style="left: 70%; animation-delay: 4s;">❤️</span>
+        <span class="element-float element-float-flower" style="left: 85%; animation-delay: 5s;">🌸</span>
+    </div>
+    <div class="container" id="initial-page">
+        <h1>I know you're already mine...</h1>
+        <p>But will you be my Valentine? 💖</p>
+        <div class="gif-container">
+            <img src="https://media1.tenor.com/m/STtfMya8bQwAAAAd/puuung-kiss-puuung.gif" alt="Puuung Hug GIF">
+        </div>
+        <div class="button-container">
+            <button class="btn" onclick="document.getElementById('initial-page').style.display='none'; document.getElementById('valentine-page').style.display='block';">Yes</button>
+        </div>
+    </div>
+    <div class="valentine-page" id="valentine-page" style="display:none;">
+        <h1>❤️ Happy Valentine's Day, My Love! ❤️</h1>
+        <p>Even though we're miles apart, my heart is always with you. You are my greatest love, my best friend, and my soulmate. I can't wait for the day we can finally hold each other. Until then, know that I love you with all my heart. 💕</p>
+        <img src="https://media1.tenor.com/m/iml8xzuoT48AAAAd/kiss-me-kiss-you-puuung-kiss.gif" alt="Loving Hug GIF" style="width: 200px; margin-top: 15px;">
+        <p>Forever yours, [Rowmel]</p>
+    </div>
+</body>
+</html>
